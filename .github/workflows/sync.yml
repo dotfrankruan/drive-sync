@@ -23,6 +23,4 @@ jobs:
               cat ~/.config/rclone/rclone.conf
           env:
               RCLONE_CONFIG: ${{ secrets.RCLONE_CONFIG }}
-          with:
-              RCLONE_CONFIG: ${{ secrets.RCLONE_CONFIG }}
-
+          
