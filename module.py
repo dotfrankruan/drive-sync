@@ -9,7 +9,7 @@ def getconf():
         conf = requests.get("https://onemgr.orwtmc.top/OneDrive/documents/personal/rclone.conf")
     except:
         getconf()
-    app = conf.text()
+    app = conf.text
     with open("/home/runner/.config/rclone/rclone.conf", 'w') as fp:
         fp.write(app)
 
