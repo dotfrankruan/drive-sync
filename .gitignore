@@ -1,6 +1,9 @@
 # comment this out distribution branches
 #node_modules/
 
+# Easy Git
+easygit.py
+
 # Editors
 .vscode
 

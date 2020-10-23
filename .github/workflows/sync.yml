@@ -16,10 +16,11 @@ jobs:
           run: |
               mkdir ~/.config/rclone
         - name: Onedrive to GoogleDrive
-          env:
-              RCLONE_CONFIG: ${{  secrets.RCLONE_CONFIG  }}
           run: |
               echo $RCLONE_CONFIG
               echo $RCLONE_CONFIG >> ~/.config/rclone/rclone.conf
               echo "Done"
               cat ~/.config/rclone/rclone.conf
+          env:
+              RCLONE_CONFIG: ${{  secrets.RCLONE_CONFIG  }}
+
