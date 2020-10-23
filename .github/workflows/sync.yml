@@ -18,4 +18,5 @@ jobs:
         - name: Onedrive to GoogleDrive
           run: |
               # Start Mission 
-              python3 module.py
+              python3 module.py getconf
+              python3 module.py copy
