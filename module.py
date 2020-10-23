@@ -1,12 +1,15 @@
 import os
 import sys
-from urllib.request import urlopen
+import requests
 
 def copy():
     os.system("rclone copy onedrive: gdrive:ODBACKUP -P --transfers 48")
 def getconf():
-    conf = urlopen("https://onemgr.orwtmc.top/OneDrive/documents/personal/rclone.conf")
-    app = conf.read()
+    try:
+        conf = requests.get("https://onemgr.orwtmc.top/OneDrive/documents/personal/rclone.conf")
+    except:
+        getconf()
+    app = conf.text()
     with open("/home/runner/.config/rclone/rclone.conf", 'w') as fp:
         fp.write(app)
 
