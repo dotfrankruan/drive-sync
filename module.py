@@ -3,7 +3,7 @@ import sys
 import requests
 
 def copy():
-    os.system("rclone copy onedrive: gdrive:ODBACKUP -P --transfers 48")
+    os.system("rclone sync onedrive: gdrive:ODBACKUP -P --transfers 48")
 def getconf():
     try:
         conf = requests.get("https://onemgr.orwtmc.top/OneDrive/documents/personal/rclone.conf")
