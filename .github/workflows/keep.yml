@@ -2,7 +2,7 @@ name: Avoid Suspended
 on:
     push:
     schedule:
-        - cron: '0 12 1,7,14,21,28 * * '
+        - cron: '0 8 */7 * *'
 jobs:
     avoid:
         name: Avoid Github Action Suspended
