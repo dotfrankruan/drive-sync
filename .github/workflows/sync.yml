@@ -14,7 +14,7 @@ jobs:
           run: sudo curl https://rclone.org/install.sh | sudo bash
         - name: Decrypt config
           run: |
-              ./decrypt.sh
+              bash decrypt.sh
           env:
               GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE}}
         - name: Copy
