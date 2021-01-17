@@ -12,12 +12,12 @@ jobs:
           uses: actions/checkout@master
         - name: Download and Install rclone
           run: sudo curl https://rclone.org/install.sh | sudo bash
-        - name: Config rclone
+        - name: Decrypt config
           run: |
-              mkdir ~/.config/rclone
-        - name: Onedrive to GoogleDrive
+              ./decrypt.sh
+          env:
+              GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE}}
+        - name: Copy
           run: |
               # Start Mission 
-              pip3 install requests
-              python3 module.py getconf
               python3 module.py copy
