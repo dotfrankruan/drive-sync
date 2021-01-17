@@ -6,6 +6,7 @@ And config your rclone. This is for OneDrive -> Google Drive. So please use:
 name: onedrive            For OneDrive
 name: gdrive_mirror       For Google Drive
 ```
+(You can change them in `copy.sh`)
 After you done that, find your config and use:
 ```shell
 gpg --symmetric --cipher-algo AES256 rclone.conf

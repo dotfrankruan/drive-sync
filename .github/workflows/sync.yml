@@ -20,4 +20,4 @@ jobs:
         - name: Copy
           run: |
               # Start Mission 
-              python3 module.py copy
+              bash copy.sh
