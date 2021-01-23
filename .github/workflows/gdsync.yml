@@ -1,4 +1,4 @@
-name: Drive Sync
+name: Google Drive Sync
 on:
     push:
     schedule:
