@@ -1,0 +1,23 @@
+name: Club OneDrive Sync
+on:
+    push:
+    schedule:
+        - cron: '0 0/6 * * *'
+jobs:
+    move:
+        name: Club OneDrive to Google Drive Sync
+        runs-on: ubuntu-latest
+        steps:
+        - name: checkout
+          uses: actions/checkout@master
+        - name: Download and Install rclone
+          run: sudo curl https://rclone.org/install.sh | sudo bash
+        - name: Decrypt config
+          run: |
+              bash decrypt.sh
+          env:
+              GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE}}
+        - name: Copy
+          run: |
+              # Start Mission 
+              bash clubcopy.sh
