@@ -4,6 +4,9 @@
 # Easy Git
 easygit.py
 
+# Self renew
+renew.py
+
 # Editors
 .vscode
 
