@@ -17,3 +17,5 @@ Go to `Settings` and click `Secrets`, create a repository secret called `GPG_PAS
 Then edit this document, add sth. or delete sth. Then click save(This'll start the workflow).
 
 **That's it, it'll run per 6 hrs.**
+# IMPORTANT
+**I also use this thing, so I added some workflows. YOU SHOULD ALWAYS DELETE EVERYTHING EXCEPT `sync.yml` IN .github/workflows!!!!!!!! OTHERWISE YOUR WORKFLOW WILL FAIL!!!!!**
