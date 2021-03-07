@@ -4,7 +4,7 @@ on:
     schedule:
         - cron: '0 0/6 * * *'
 jobs:
-    move:
+    tjod:
         name: OneDrive to Google Drive Sync
         runs-on: ubuntu-latest
         steps:
