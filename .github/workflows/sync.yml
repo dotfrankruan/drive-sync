@@ -21,7 +21,8 @@ jobs:
           run: |
               # Start Mission 
               bash copy.sh
-   club:
+
+    club:
         name: Club OneDrive to OneDrive Sync
         runs-on: ubuntu-latest
         steps:
