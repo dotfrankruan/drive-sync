@@ -21,24 +21,7 @@ jobs:
           run: |
               # Start Mission 
               bash copy.sh
-    clgd:
-        name: Club OneDrive to Google Drive Sync
-        runs-on: ubuntu-latest
-        steps:
-        - name: checkout
-          uses: actions/checkout@master
-        - name: Download and Install rclone
-          run: sudo curl https://rclone.org/install.sh | sudo bash
-        - name: Decrypt config
-          run: |
-              bash decrypt.sh
-          env:
-              GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE}}
-        - name: Copy
-          run: |
-              # Start Mission 
-              bash clubcopy.sh
-    club:
+   club:
         name: Club OneDrive to OneDrive Sync
         runs-on: ubuntu-latest
         steps:
@@ -73,7 +56,7 @@ jobs:
               # Start Mission 
               bash gamecdn.sh
     emby:
-        name: Google Drive to Google Drive Sync
+        name: Emby Google Drive to Google Drive Sync
         runs-on: ubuntu-latest
         steps:
         - name: checkout
@@ -123,3 +106,20 @@ jobs:
           run: |
               # Start Mission 
               bash wholebackup.sh
+    edubcp:
+        name: Full Backup to EDU
+        runs-on: ubuntu-latest
+        steps:
+        - name: checkout
+          uses: actions/checkout@master
+        - name: Download and Install rclone
+          run: sudo curl https://rclone.org/install.sh | sudo bash
+        - name: Decrypt config
+          run: |
+              bash decrypt.sh
+          env:
+              GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE}}
+        - name: Backup
+          run: |
+              # Start Mission 
+              bash eduwhole.sh 
