@@ -18,4 +18,4 @@ Then edit this document, add sth. or delete sth. Then click save(This'll start t
 
 **That's it, it'll run per 6 hrs.**
 # IMPORTANT
-**I also use this thing, so I added some workflows. YOU SHOULD ALWAYS DELETE EVERYTHING EXCEPT `sync.yml` IN .github/workflows!!!!!!!! OTHERWISE YOUR WORKFLOW WILL FAIL!!!!!**
+**I also use this project, so you should delete all text below the 24th line. Then delete all the .sh file except `copy.sh` and `decrypt.sh`**
