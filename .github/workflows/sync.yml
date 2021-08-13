@@ -22,23 +22,6 @@ jobs:
               # Start Mission 
               bash copy.sh
 
-    club:
-        name: Club OneDrive to OneDrive Sync
-        runs-on: ubuntu-latest
-        steps:
-        - name: checkout
-          uses: actions/checkout@master
-        - name: Download and Install rclone
-          run: sudo curl https://rclone.org/install.sh | sudo bash
-        - name: Decrypt config
-          run: |
-              bash decrypt.sh
-          env:
-              GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE}}
-        - name: Copy
-          run: |
-              # Start Mission 
-              bash clubod.sh
     cdni:
         name: Games CDN
         runs-on: ubuntu-latest
