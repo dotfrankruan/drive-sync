@@ -1,3 +1,6 @@
+# Important notice
+**Due to the usage policy of Github Actions and the API limit of Microsoft, Google etc., we do not recommend this project as your replication method now.**
+
 # How to use
 Go to <a href="https://gpg4win.org/thanks-for-download.html" target="_blank">GPG4Win</a> and download the latest GPG4win.
 Install it.
